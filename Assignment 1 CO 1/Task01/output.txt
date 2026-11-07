@@ -1,0 +1,13 @@
+============================================================
+ TASK 1: OBJECT-ORIENTED METRO SMART-CARD AUDIT SYSTEM
+ Course: DSA0117 (CO1) | Student: G. Vishnu Madhav (192425192)
+============================================================
+Card Issued: SC-KA-10294 | Commuter: G. Vishnu Madhav | Initial Balance: Rs 100.00
+
+Journey #1 to Zone: Inner  | Time: 70:00 (OFF-PEAK) | Fare: Rs 10.00 | [GRANTED] Balance: Rs 90.00
+Journey #2 to Zone: Outer  | Time: 90:00 (PEAK    ) | Fare: Rs 36.00 | [GRANTED] Balance: Rs 54.00
+Journey #3 to Zone: Middle | Time: 14:00 (OFF-PEAK) | Fare: Rs 20.00 | [DENIED] Low Balance (Min Rs 50 required). Current: Rs 54.00
+Journey #4 to Zone: Outer  | Time: 18:00 (PEAK    ) | Fare: Rs 36.00 | [DENIED] Low Balance (Min Rs 50 required). Current: Rs 54.00
+
+Final Card Balance: Rs 54.00
+Validation: Invariant Balance >= Rs 50.00 is strictly preserved!
