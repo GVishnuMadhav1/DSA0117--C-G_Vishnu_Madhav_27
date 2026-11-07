@@ -1,0 +1,18 @@
+============================================================
+ Q5: STATIC DATA MEMBERS AND ARRAYS OF OBJECTS AUDIT
+ Course: DSA0117 (CO2) | Student: G. Vishnu Madhav (192425192)
+============================================================
+--- 1. PREDICT THE OUTPUT ---
+101 103 104 4
+
+--- 2. COMPLETE THE CODE: BUS TICKET SYSTEM ---
+Asha: Seat 1
+Bala: Seat 2
+Chitra: Seat 3
+Dev: Waiting
+Issued: 3
+
+--- 3. STATIC PERSISTENCE TEST ACROSS FUNCTION CALLS ---
+Calling createBatch() twice...
+Final Total Issued (waiting list capped): 3
+[PASS] Static lifetime and array of objects verified successfully!
