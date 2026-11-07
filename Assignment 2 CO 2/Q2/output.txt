@@ -1,0 +1,13 @@
+============================================================
+ Q2: RETURN BY REFERENCE AND LIFETIME EVALUATION
+ Course: DSA0117 (CO2) | Student: G. Vishnu Madhav (192425192)
+============================================================
+Original Highest Mark: 92
+After Moderation (+2) through L-value reference: 94
+After Direct Assignment (= 98): 98
+
+--- DYNAMIC VECTOR REALLOCATION DANGER ---
+Reference to reg[0] before growth: 70
+Vector reallocated to new memory capacity: 192
+[WARNING] Pre-growth references/pointers become invalid dangling aliases!
+[PASS] Return by reference semantics and safety boundaries verified!
