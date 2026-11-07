@@ -1,0 +1,16 @@
+============================================================
+ Q5: OVERLOADING INCREMENT AND SUBSCRIPT OPERATORS
+ Course: DSA0117 (CO3) | Student: G. Vishnu Madhav (192425192)
+============================================================
+--- 1. PREDICT THE OUTPUT ---
+5 7 7
+
+--- 2. ROLLOVER TEST: 00:59:59 -> 01:00:00 ---
+Before Increment : 0:59:59
+After Prefix ++  : 1:0:0
+
+--- 3. PLAYLIST SUBSCRIPT [] WITH RANGE CHECK ---
+pl[0]: Track 1: Classical
+pl[2]: Track 3: Rhapsody
+Accessing pl[-1]: [CAUGHT] Playlist index out of range!
+[PASS] Increment, subscript and bounds safety verified!
