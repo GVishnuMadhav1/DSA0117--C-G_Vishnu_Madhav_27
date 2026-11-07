@@ -1,0 +1,18 @@
+============================================================
+ TASK 10: EXPECTATIONS VS EXECUTION (LARGE-SCALE BENCHMARK)
+ Course: DSA0117 (CO1) | Student: G. Vishnu Madhav (192425192)
+============================================================
++---------------------------+-------------------+--------------------+------------------+
+| Network Simulation Tier   | Double Total (Rs) | Integer Paise (Rs) | Discrepancy (Rs) |
++---------------------------+-------------------+--------------------+------------------+
+| 1 Station (20,000)        | Rs      484000.00 | Rs       484000.00 | Rs        0.0000 |
+| 1 Line (500,000)          | Rs    12100000.00 | Rs     12100000.00 | Rs       -0.0001 |
+| Whole Network (3,000,000) | Rs    72600000.00 | Rs     72600000.00 | Rs        0.0041 |
++---------------------------+-------------------+--------------------+------------------+
+
+--- EMPIRICAL FINDINGS & RUNTIME ANALYSIS ---
+1. Precision Drift: At 3,000,000 transactions, double loses paise precision continuously.
+2. Integer Overflow: Daily network revenue = 3,000,000 * 2420 = 7,260,000,000 paise (Rs 7.26 Cr).
+   INT_MAX = 2,147,483,647 paise (~Rs 2.14 Cr). Standard 32-bit 'int' overflows by 11:00 AM!
+3. Compiler Diagnostics: Compiled under -Wall -Wextra with 0 errors and 0 warnings.
+[PASS] Mathematical proof and empirical scale benchmarks match expectations!
