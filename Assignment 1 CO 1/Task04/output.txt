@@ -1,0 +1,16 @@
+============================================================
+ TASK 4: CONTROL IMPLICIT CONVERSIONS (PREDICT THE OUTPUT)
+ Course: DSA0117 (CO1) | Student: G. Vishnu Madhav (192425192)
+============================================================
+3 3.5
+C 68
+1 true
+s >= u
+
+--- CONVERSION MECHANISM ANALYSIS ---
+Line 1: 'a / b' does integer division (7/2 = 3), then converts to double 3.0.
+        'static_cast<double>(a) / b' promotes b to double 2.0, yielding 3.5.
+Line 2: 'A' + 2 is ASCII 67 = 'C'. 'ch + 1' promotes char to int, yielding 68.
+Line 3: Non-zero 5 converts to bool true (printed as 1, then true with boolalpha).
+Line 4: Signed s (-1) promoted to unsigned int (4294967295U), hence s >= u!
+[PASS] Execution matches theoretical prediction with 100% fidelity!
