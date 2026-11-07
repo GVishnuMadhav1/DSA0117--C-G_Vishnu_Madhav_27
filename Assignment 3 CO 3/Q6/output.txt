@@ -1,0 +1,8 @@
+============================================================
+ Q6: RULES OF OPERATOR OVERLOADING & SMS GATEWAY TEXT
+ Course: DSA0117 (CO3) | Student: G. Vishnu Madhav (192425192)
+============================================================
+Concatenated Message: OTP: 4819. Valid for 10 minutes.
+Equality Check (copyMsg == fullMsg): true
+After self assignment: OTP: 4819. Valid for 10 minutes.
+[PASS] Rules of operator overloading verified!
