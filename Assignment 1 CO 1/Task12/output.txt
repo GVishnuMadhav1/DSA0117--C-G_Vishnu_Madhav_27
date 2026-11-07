@@ -1,0 +1,19 @@
+============================================================
+ TASK 12: DAY-4 DESIGN CHALLENGE - ADAPTATION & REDESIGN
+ Course: DSA0117 (CO1) | Student: G. Vishnu Madhav (192425192)
+============================================================
+--- 1. NEW REQUIREMENT SPECIFICATIONS ---
+1. Fourth Zone: Airport Zone added at Rs 60.00 base fare.
+2. Weekend Discount: 10% discount on Saturday/Sunday (Peak surcharge disabled).
+3. Monthly Pass: Free travel across 2 nominated zones (e.g., Inner & Airport).
+
+--- 2. EXECUTION SCENARIO VALIDATION ---
+Scenario A: Regular Weekday Airport Trip at 09:00 (Peak):
+  Trip to Airport | Covered by Monthly Pass -> Rs 0 deducted. Balance: Rs 120.00
+Scenario B: Weekday Middle Zone Trip at 09:00 (Peak - Not covered by pass):
+  Trip to Middle  | Fare: Rs 24.00 | Remaining Balance: Rs 96.00
+Scenario C: Weekend Airport Trip (Without pass demonstration):
+Commuter without pass traveling to Airport on Weekend:
+  Trip to Airport | [DENIED] Low Balance! Required Fare: Rs 54. Current Balance: Rs 100.00
+
+[PASS] Day-4 Challenge: Impact Analysis, Redesign, and Defended Invariants Verified!
