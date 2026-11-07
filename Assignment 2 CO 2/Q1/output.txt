@@ -1,0 +1,14 @@
+============================================================
+ Q1: CALL BY VALUE, BY REFERENCE AND BY POINTER
+ Course: DSA0117 (CO2) | Student: G. Vishnu Madhav (192425192)
+============================================================
+--- 1. PREDICT THE OUTPUT EXECUTION ---
+1 12 13
+1 100
+16 13 6 
+
+--- 2. COMPLETE THE CODE: HOSTEL CONCESSION UPDATER ---
+after call by value    : 45000
+after call by reference: 40500
+after call by pointer  : 38250
+[PASS] Q1 verified successfully!
