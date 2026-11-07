@@ -1,0 +1,19 @@
+============================================================
+ Q4: CLASS WITH INTERNAL ARRAY & CIRCULAR TRANSACTION BUFFER
+ Course: DSA0117 (CO2) | Student: G. Vishnu Madhav (192425192)
+============================================================
++------------------------------------------------------------+
+| MINI-STATEMENT: ACC SB-91024 | Balance: Rs 13600.00 |
++------------------------------------------------------------+
+| Txn # 1: DEPOSIT  +Rs   2000.00                          |
+| Txn # 2: WITHDRAW -Rs    300.00                          |
+| Txn # 3: DEPOSIT  +Rs   1500.00                          |
+| Txn # 4: WITHDRAW -Rs    200.00                          |
+| Txn # 5: DEPOSIT  +Rs    800.00                          |
+| Txn # 6: WITHDRAW -Rs    100.00                          |
+| Txn # 7: DEPOSIT  +Rs   2500.00                          |
+| Txn # 8: WITHDRAW -Rs    400.00                          |
+| Txn # 9: DEPOSIT  +Rs   3000.00                          |
+| Txn #10: WITHDRAW -Rs    700.00                          |
++------------------------------------------------------------+
+[PASS] Class encapsulation, circular indexing, and scoping verified!
