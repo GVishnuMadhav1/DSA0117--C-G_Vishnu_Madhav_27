@@ -1,0 +1,15 @@
+============================================================
+ Q6: FRIEND FUNCTIONS, INLINING AND TEMPORAL COMPARISON
+ Course: DSA0117 (CO2) | Student: G. Vishnu Madhav (192425192)
+============================================================
+--- 1. EXPECTED OUTPUT EXECUTION ---
+205 false
+
+--- 2. CORRECTNESS BOUNDARY CHECKS ---
+Across Noon (11:45 to 12:15): 30 mins | Earlier: true
+Same Time Twice (15:30 & 15:30): 0 mins | Earlier: false
+
+--- 3. HIGH-THROUGHPUT TIMING BENCHMARK (10,000,000 CALLS) ---
+10,000,000 calls elapsed time: 23 ms
+Accumulator checksum: 2050000000
+[PASS] Friend access, inlining and timing verified!
