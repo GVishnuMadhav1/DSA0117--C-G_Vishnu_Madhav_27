@@ -1,0 +1,12 @@
+============================================================
+ Q3: DYNAMIC CONSTRUCTORS, DESTRUCTORS AND RAII AUDIT
+ Course: DSA0117 (CO3) | Student: G. Vishnu Madhav (192425192)
+============================================================
+--- 1. PREDICT THE OUTPUT EXECUTION ---
++A +B -B copyAc use -Ac +P -P end 
+
+--- 2. DYNAMIC 2D SEAT MAP ALLOCATION & BOOKING ---
+Auditorium allocated: 10 rows x 20 seats (200 seats). Bookings active.
+Exiting scope... RAII automatically releases all 2D dynamic buffers!
+[PASS] Memory management and destruction sequence validated!
+-A 
