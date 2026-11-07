@@ -1,0 +1,9 @@
+============================================================
+ Q4: OVERLOADING ARITHMETIC AND STREAM OPERATORS
+ Course: DSA0117 (CO3) | Student: G. Vishnu Madhav (192425192)
+============================================================
+Rs 200.00
+true
+--- CARRY TEST: Rs 0.75 + Rs 0.50 ---
+Rs 0.75 + Rs 0.50 = Rs 1.25 (Carried cleanly into Rs 1.25)
+[PASS] Operator overloading +, ==, and << verified successfully!
