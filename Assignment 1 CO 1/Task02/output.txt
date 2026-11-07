@@ -1,0 +1,28 @@
+============================================================
+ TASK 2: TOKENS, IDENTIFIERS AND CONSTEXPR CONSTANTS
+ Course: DSA0117 (CO1) | Student: G. Vishnu Madhav (192425192)
+============================================================
+--- 1. FIVE CATEGORIES OF TOKENS IN METRO ENGINE ---
+1. Keywords:    enum, class, constexpr, long, bool, return, static_cast
+2. Identifiers: Zone, SmartCard, FARE_INNER_PAISE, getBaseFare
+3. Constants:   1000LL, 2000LL, 3000LL, 20, 5000LL
+4. Operators:   +, -, *, /, %, <<, ==, >=, static_cast<>()
+5. Punctuators: ;, {, }, (, ), [, ], ::, ,
+
+--- 2. CONSTEXPR FARE LOOKUP TABLE EVALUATION ---
+Zone::Inner  Base Fare: Rs 10.00 (1000 paise)
+Zone::Middle Base Fare: Rs 20.00 (2000 paise)
+Zone::Outer  Base Fare: Rs 30.00 (3000 paise)
+
+--- 3. COMPARISON: #define vs const vs constexpr ---
+| Mechanism | Type Safety | Scoped | Eval Time    | Memory Overhead |
+|-----------|-------------|--------|--------------|-----------------|
+| #define   | None (text) | Global | Preprocessor | None            |
+| const     | Full        | Yes    | Run/Compile  | May allocate    |
+| constexpr | Full (RO)   | Yes    | Compile-time | Zero (inlined)  |
+
+--- 4. ENUM CLASS SAFETY ADVANTAGES ---
+- Strongly typed: implicit conversion to int is rejected at compile time.
+- Scope isolated: Zone::Inner does not pollute global namespace.
+- Single Point of Change: Fares revised in constexpr table propagate network-wide.
+[PASS] Token and constant architecture verified successfully!
