@@ -1,0 +1,12 @@
+============================================================
+ TASK 6: CONTROL STRUCTURES & COMPLETE-THE-CODE VALIDATION
+ Course: DSA0117 (CO1) | Student: G. Vishnu Madhav (192425192)
+============================================================
+Fare Rs 10.00  balance Rs 90
+Fare Rs 36.00  balance Rs 54
+Denied (low balance)  balance Rs 54
+
+--- BOUNDARY CHECK AT 10:00 AM AND 8:00 PM ---
+At exactly 10:00 AM: isPeak = false -> Fare for Outer Zone = Rs 30.00 (Off-Peak Correct)
+At exactly 08:00 PM: isPeak = false -> Fare for Outer Zone = Rs 30.00 (Off-Peak Correct)
+[PASS] All TODOs implemented and expected outputs verified!
