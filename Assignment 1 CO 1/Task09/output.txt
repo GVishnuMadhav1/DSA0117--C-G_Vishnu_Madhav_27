@@ -1,0 +1,19 @@
+============================================================
+ TASK 9: RIGOROUS VERIFICATION TEST BENCH & TEST MATRIX
+ Course: DSA0117 (CO1) | Student: G. Vishnu Madhav (192425192)
+============================================================
++----+------------------------------+-------+----------+----------+----------+
+| ID | Description                  | Time  | Exp Fare | Act Fare | Status   |
++----+------------------------------+-------+----------+----------+----------+
+|  1 | Inner Off-Peak (Regular)     | 07:00 | Rs   10 | Rs   10 |   PASS   |
+|  2 | Inner Peak 08:00 (Regular)   | 08:00 | Rs   12 | Rs   12 |   PASS   |
+|  3 | Boundary Off-Peak 10:00      | 10:00 | Rs   30 | Rs   30 |   PASS   |
+|  4 | Boundary Peak 17:00 (Outer)  | 17:00 | Rs   36 | Rs   36 |   PASS   |
+|  5 | Boundary Off-Peak 20:00      | 20:00 | Rs   30 | Rs   30 |   PASS   |
+|  6 | Exact Rs 50.00 Balance Bound | 14:00 | Rs   10 | Rs   10 |   PASS   |
+|  7 | Denied: Drops to Rs 49.00    | 14:00 | Rs   10 | Rs   10 |   PASS   |
+|  8 | Student Concession 50% Peak  | 09:00 | Rs   18 | Rs   18 |   PASS   |
+|  9 | Senior Citizen 25% Off-Peak  | 12:00 | Rs   15 | Rs   15 |   PASS   |
++----+------------------------------+-------+----------+----------+----------+
+Test Suite Results: 9 / 9 passed (100% Success Rate)
+[PASS] Automated test bench verified all boundary and concession paths!
