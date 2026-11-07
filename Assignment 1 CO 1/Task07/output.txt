@@ -1,0 +1,13 @@
+============================================================
+ TASK 7: PROCEDURAL VS OBJECT-ORIENTED PARADIGM COMPARISON
+ Course: DSA0117 (CO1) | Student: G. Vishnu Madhav (192425192)
+============================================================
+--- 1. PROCEDURAL FAILURE DEMONSTRATION ---
+Procedural Card Balance after 2 unverified deductions: Rs -12.0 [SECURITY FLAW: Negative balance created!]
+
+--- 2. OBJECT-ORIENTED INVARIANT PROTECTION ---
+OOP Card Initial Balance: Rs 60.00
+Attempt 1 (Rs 36.00): [DENIED] Invariant Rs 50.00 preserved! Current: Rs 60.00
+Attempt 2 (Rs 10.00): Approved | Balance: Rs 50.00
+
+[PASS] Object-Oriented encapsulation eliminates negative balance bugs completely!
