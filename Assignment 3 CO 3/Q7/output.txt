@@ -1,0 +1,8 @@
+============================================================
+ Q7: AC CIRCUIT IMPEDANCE CALCULATOR (COMPLEX CLASS)
+ Course: DSA0117 (CO3) | Student: G. Vishnu Madhav (192425192)
+============================================================
+Series RLC Impedance   : Z_series   = 100.00 + 30.00j Ohm | Mag: 104.40 Ohm
+Parallel RC Impedance  : Z_parallel = 3.85 - 19.23j Ohm | Mag: 19.61 Ohm
+Division by Zero Check : [TRAPPED] Division by zero impedance!
+[PASS] AC Circuit Impedance Calculator completely validated!
