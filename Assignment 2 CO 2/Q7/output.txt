@@ -1,0 +1,10 @@
+============================================================
+ Q7: DAY-4 DESIGN CHALLENGE - DIAGNOSE, REDESIGN & VALIDATE
+ Course: DSA0117 (CO2) | Student: G. Vishnu Madhav (192425192)
+============================================================
+--- 1. EMPIRICAL BENCHMARK: SHIFTING ARRAY VS CIRCULAR BUFFER ---
+Operations Executed : 1000000 transactions
+Original Shifting   : 55 ms (O(k) memory shifts)
+Redesigned Circular : 1 ms (O(1) pointer updates)
+Measured Speedup    : 55.00x faster!
+[PASS] Day-4 Challenge: Diagnosed, Redesigned, and Validated!
