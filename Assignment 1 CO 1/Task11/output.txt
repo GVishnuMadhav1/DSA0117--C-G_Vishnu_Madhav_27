@@ -1,0 +1,15 @@
+============================================================
+ TASK 11: RECOMMENDED FINAL ENTERPRISE ARCHITECTURE
+ Course: DSA0117 (CO1) | Student: G. Vishnu Madhav (192425192)
+============================================================
+--- 1. ENTERPRISE ARCHITECTURE HIGHLIGHTS ---
+- Monetary Precision: 64-bit integer paise (long long) prevents all float inaccuracies.
+- Zero-Downtime Revisions: Single centralized constexpr table defines base rates.
+- Invariant Protection: SmartCard encapsulates balance and strictly prevents < Rs 50 balance.
+- High Throughput: Stateless O(1) inlined fare calculations.
+
+--- 2. STRESS BENCHMARK (100,000 CONCURRENT TRANSACTIONS) ---
+Processed 100,000 transactions in: 1.498 ms
+Throughput: 66755674 trips/second
+Total Revenue Processed: Rs 2083318.00
+[PASS] Final enterprise architecture defended and validated!
