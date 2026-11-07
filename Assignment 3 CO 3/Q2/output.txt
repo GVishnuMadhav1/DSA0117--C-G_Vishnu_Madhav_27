@@ -1,0 +1,7 @@
+============================================================
+ Q2: DEEP COPY CONSTRUCTOR AND RULE OF THREE AUDIT
+ Course: DSA0117 (CO3) | Student: G. Vishnu Madhav (192425192)
+============================================================
+Ibuprofen ORS | Paracetamol Cetirizine | Paracetamol ORS
+Self-assignment test (p = p): Ibuprofen ORS [SAFE]
+[PASS] Expected output matched and independent deep copies verified!
