@@ -1,0 +1,21 @@
+============================================================
+ TASK 8: SAFE STREAM I/O, RECOVERY AND REPORT FORMATTING
+ Course: DSA0117 (CO1) | Student: G. Vishnu Madhav (192425192)
+============================================================
+--- 1. INPUT STREAM CORRUPTION AND RECOVERY SIMULATION ---
+Commencing robust input parsing with std::cin error checks:
+Attempting to read recharge amount: [ERROR] Non-numeric input encountered (cin.fail() == true)!
+        Recovery: Cleared state flags and discarded: 'abc'
+Attempting to read recharge amount: [ERROR] Recharge must be positive! Value typed: Rs -50
+Attempting to read recharge amount: [SUCCESS] Valid recharge accepted: Rs 200.00
+
+--- 2. STANDARDIZED METRO COMMUTER AUDIT REPORT ---
++---------+------------+-------+------------+-------------+----------+
+| Trip ID | Zone       | Time  | Fare (Rs)  | Balance(Rs) | Status   |
++---------+------------+-------+------------+-------------+----------+
+|     101 | Inner      | 08:00 | Rs    12.00 | Rs     88.00 |  APPROVED |
+|     102 | Outer      | 09:00 | Rs    36.00 | Rs     52.00 |  APPROVED |
+|     103 | Middle     | 13:00 | Rs    20.00 | Rs     52.00 |    DENIED |
+|     104 | Inner      | 18:00 | Rs    12.00 | Rs     52.00 |    DENIED |
++---------+------------+-------+------------+-------------+----------+
+[PASS] Safe I/O stream recovery and fixed-width alignment verified!
