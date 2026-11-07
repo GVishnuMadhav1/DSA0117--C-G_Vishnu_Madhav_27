@@ -1,0 +1,12 @@
+============================================================
+ Q3: FUNCTION OVERLOADING & DEFAULT ARGUMENTS AUDIT
+ Course: DSA0117 (CO2) | Student: G. Vishnu Madhav (192425192)
+============================================================
+Call 1: charge(500)       [int grams]       -> Rs 25
+Call 2: charge(500, true) [int + express]   -> Rs 75
+Call 3: charge(2.5)       [double kg]       -> Rs 112.5
+Call 4: charge(2.5, true, true) [double all]-> Rs 192.5
+Call 5: charge(2)         [int exact match] -> Rs 0.1
+Call 6: charge(2.0f)      [float->double]   -> Rs 90
+Call 7: charge(Parcel)    [Object overload] -> Rs 230
+[PASS] Ambiguity resolved and overload resolution validated!
