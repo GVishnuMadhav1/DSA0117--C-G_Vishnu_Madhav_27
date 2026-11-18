@@ -1,0 +1,16 @@
+====================================================================
+ SIMATS ENGINEERING - OOP C++ (DSA0117) - ASSIGNMENT 4 TASK 1
+ Student: G Vishnu Madhav | Reg No: 192425192 | Section: AI-ML
+ Task 1: Class Design Review - Payroll Hierarchy & Polymorphism
+====================================================================
+
+--- Standardized Monthly Payroll Processing (Single Unified Loop) ---
+Emp ID  Employee Name       Total Pay (Rs)  Breakdown Details
+--------------------------------------------------------------------
+101     Dr. R. Raman (Prof)      121500.00  [Basic: 75000.00, DA: 31500.00, Research: 15000.00]
+205     Mr. K. Suresh (Lab Asst)      45440.00  [Basic: 32000.00, DA: 13440.00]
+309     Ms. A. Priya (Guest Fac)      54000.00  [Hours: 45.00, Rate: 1200.00]
+104     Dr. M. Swaminathan (Prof)     136440.00  [Basic: 82000.00, DA: 34440.00, Research: 20000.00]
+--------------------------------------------------------------------
+Grand Total Payroll Disbursement:Rs. 357380.00
+====================================================================
