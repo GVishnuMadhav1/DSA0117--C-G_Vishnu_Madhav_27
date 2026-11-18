@@ -1,0 +1,36 @@
+====================================================================
+ SIMATS ENGINEERING - OOP C++ (DSA0117) - ASSIGNMENT 4 TASK 5
+ Student: G Vishnu Madhav | Reg No: 192425192 | Section: AI-ML
+ Task 5: Pointers to Objects and the 'this' Pointer
+====================================================================
+
+>>> 1. Assignment Complete-the-Code Execution Result:
+Calculated Output: 324.00
+Expected Output  : 324.00 (Verification SUCCESSFUL)
+
+>>> 2. Task 5.1: Four Ways to Reach a Cart Object:
+(a) Directly by name:
+Cart [CUST-101] - Items: 2, Discount: 5.00%, Total: Rs. 437.00
+   1. Basmati Rice : Rs. 140.00
+   2. Ghee : Rs. 320.00
+
+(b) Through a pointer with ->:
+Cart [CUST-102] - Items: 2, Discount: 10.00%, Total: Rs. 135.00
+   1. Atta Flour : Rs. 65.00
+   2. Spices : Rs. 85.00
+
+(c) Through a reference with .:
+Cart [CUST-103] - Items: 2, Discount: 0.00%, Total: Rs. 114.00
+   1. Milk Packet : Rs. 30.00
+   2. Eggs (12) : Rs. 84.00
+
+(d) Dynamically allocated with new and released with delete:
+Cart [CUST-104] - Items: 2, Discount: 15.00%, Total: Rs. 535.50
+   1. Olive Oil : Rs. 450.00
+   2. Dark Chocolate : Rs. 180.00
+
+>>> 3. Task 5.2: Array of Pointers Search for Highest Total:
+Highest Value Cart Located:
+  Customer ID: Cust-Delta
+  Highest Cart Total: Rs. 902.50
+====================================================================
