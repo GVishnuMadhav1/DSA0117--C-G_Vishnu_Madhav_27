@@ -1,0 +1,48 @@
+====================================================================
+ SIMATS ENGINEERING - OOP C++ (DSA0117) - ASSIGNMENT 4 TASK 4
+ Student: G Vishnu Madhav | Reg No: 192425192 | Section: AI-ML
+ Task 4: Pointers to Derived Classes - Forensics, Leak & Slicing
+====================================================================
+
+>>> 1. Predict-the-Output Code Execution:
+Output: 3.5 4 3.5
+Explanation of Three Values:
+  1) p->rate() = 3.5     : Static/compile-time binding based on pointer type Account*.
+  2) p->vrate() = 4.0    : Dynamic/runtime dispatch via vtable to SeniorAccount::vrate().
+  3) copy.vrate() = 3.5  : Object slicing stripped derived members; copy is a pure Account.
+
+>>> 2. Demonstrating Buggy Code Deficiencies:
+--- A. Non-Virtual Method Binding & Non-Virtual Destructor Memory Leak ---
+  [BuggySeniorAccount Constructor] Allocated 100 doubles (800 bytes) on heap
+Invoking rate() via base pointer:
+Account [0] Rate: 3.5%
+Account [1] Rate: 3.5%
+DEFECT CONFIRMED: Senior account earned 3.5% instead of 4.0% due to static binding!
+
+Deleting accounts via base pointers:
+Deleting account [0]:
+  [BuggyAccount Destructor] ~BuggyAccount executed
+Deleting account [1]:
+  [BuggyAccount Destructor] ~BuggyAccount executed
+DEFECT CONFIRMED: ~BuggySeniorAccount() was NOT called! Heap memory leaked (800 bytes)!
+
+--- B. Object Slicing Demonstration ---
+  [BuggySeniorAccount Constructor] Allocated 100 doubles (800 bytes) on heap
+Sliced copy rate: 3.5%
+  [BuggyAccount Destructor] ~BuggyAccount executed
+  [BuggySeniorAccount Destructor] Freeing 100 doubles from heap
+  [BuggyAccount Destructor] ~BuggyAccount executed
+
+>>> 3. Repaired Code Execution with std::unique_ptr & Virtual Methods:
+  [SeniorAccount Constructor] Allocated history buffer (800 bytes) for: SNR-8002
+
+Displaying Account Reports (Polymorphic Dynamic Dispatch):
+--------------------------------------------------------------------
+Account: REG-1001 | Balance: Rs. 150000.00 | Annual Rate: 3.50% | Annual Interest: Rs. 5250.00
+Senior Account: SNR-8002 | Balance: Rs. 250000.00 | Senior Rate: 4.00% | Annual Interest: Rs. 10000.00 [Bonus 0.5% Applied]
+--------------------------------------------------------------------
+Leaving portfolio scope - automatic RAII cleanup with virtual destructors:
+  [Account Destructor] ~Account released: REG-1001
+  [SeniorAccount Destructor] Freeing history buffer (800 bytes) for: SNR-8002
+  [Account Destructor] ~Account released: SNR-8002
+====================================================================
