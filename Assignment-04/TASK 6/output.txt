@@ -1,0 +1,84 @@
+====================================================================================================
+ SIMATS ENGINEERING - OOP C++ (DSA0117) - ASSIGNMENT 4 TASK 6
+ Student: G Vishnu Madhav | Reg No: 192425192 | Section: AI-ML
+ Task 6: Design Challenge - Reusable Vehicle Rental Fleet Hierarchy
+====================================================================================================
+
+>>> 1. Initial Fleet Inventory:
+----------------------------------------------------------------------------------------------------
+                     SIMATS VEHICLE RENTAL FLEET INVENTORY STATUS
+----------------------------------------------------------------------------------------------------
+  [Bicycle]       Reg: TN-01-BK-101 | Rate: Rs.     150/day | Frame: Mountain | Status: AVAILABLE
+  [Two-Wheeler]   Reg: TN-02-TW-202 | Rate: Rs.     450/day | CC:  150 | Fuel:   100% | Service Due: 15/12/2026 | Status: AVAILABLE
+  [Car]           Reg: TN-03-CR-303 | Rate: Rs.    2200/day | Seats:  7 | Fuel:   100% | Service Due: 20/11/2026 | Status: AVAILABLE
+  [Electric Car]  Reg: TN-04-EV-404 | Rate: Rs.    1800/day | Battery: 45 kWh | Charge:  100% | Service Due: 10/01/2027 | Status: AVAILABLE
+----------------------------------------------------------------------------------------------------
+
+>>> 2. Executing Vehicle Rentals Across Categories:
+  [RENTED SUCCESS]: Bicycle (Mountain) [TN-01-BK-101] rented for 2 days at Rs. 150/day.
+  [RENTED SUCCESS]: Two-Wheeler (150cc) [TN-02-TW-202] rented for 3 days at Rs. 450/day.
+  [RENTED SUCCESS]: Car (7 Seater) [TN-03-CR-303] rented for 4 days at Rs. 2200/day.
+  [RENTED SUCCESS]: Electric Car (45 kWh) [TN-04-EV-404] rented for 2 days at Rs. 1800/day.
+
+>>> 3. Fleet Status After Rentals:
+----------------------------------------------------------------------------------------------------
+                     SIMATS VEHICLE RENTAL FLEET INVENTORY STATUS
+----------------------------------------------------------------------------------------------------
+  [Bicycle]       Reg: TN-01-BK-101 | Rate: Rs.     150/day | Frame: Mountain | Status: RENTED
+  [Two-Wheeler]   Reg: TN-02-TW-202 | Rate: Rs.     450/day | CC:  150 | Fuel:   100% | Service Due: 15/12/2026 | Status: RENTED
+  [Car]           Reg: TN-03-CR-303 | Rate: Rs.    2200/day | Seats:  7 | Fuel:   100% | Service Due: 20/11/2026 | Status: RENTED
+  [Electric Car]  Reg: TN-04-EV-404 | Rate: Rs.    1800/day | Battery: 45 kWh | Charge:  100% | Service Due: 10/01/2027 | Status: RENTED
+----------------------------------------------------------------------------------------------------
+
+>>> 4. Demonstrating Vehicle Returns (Normal vs Late Charges & Energy Penalties):
+--- Return 1: Bicycle On-Time Return ---
+  [RETURN SUCCESS]: Bicycle (Mountain) [TN-01-BK-101] returned after 2 days. Final Bill: Rs. 300.00
+
+--- Return 2: Two-Wheeler Return with Fuel Deficit ---
+    * Fuel Deficit: Returned at 60.00% (Required 100%) -> Refuel Charge: Rs. 440.00
+  [RETURN SUCCESS]: Two-Wheeler (150cc) [TN-02-TW-202] returned after 3 days. Final Bill: Rs. 1790.00
+
+--- Return 3: 7-Seater Car with 2 Days LATE Penalty & Fuel Refill ---
+    * Late Return Notice: 2 days overdue -> Late Fee: Rs. 6600.00
+    * Fuel Deficit: Returned at 80.00% -> Refuel Fee: Rs. 440.00
+  [RETURN SUCCESS]: Car (7 Seater) [TN-03-CR-303] returned after 6 days. Final Bill: Rs. 22940.00
+
+--- Return 4: Electric Car with Energy Consumption Charge & Green Discount ---
+    * EV Recharge Charge: 22.50 kWh used @ Rs. 15.00/kWh -> Battery Recharge Fee: Rs. 337.50
+  [RETURN SUCCESS]: Electric Car (45 kWh) [TN-04-EV-404] returned after 2 days. Final Bill: Rs. 3757.50
+
+>>> 5. STAGE 5 EXTENSION DEMONSTRATION:
+Adding NEW vehicle type 'ElectricBus' WITHOUT modifying any existing vehicle classes:
+  New Vehicle Added Successfully to Fleet:
+----------------------------------------------------------------------------------------------------
+                     SIMATS VEHICLE RENTAL FLEET INVENTORY STATUS
+----------------------------------------------------------------------------------------------------
+  [Bicycle]       Reg: TN-01-BK-101 | Rate: Rs.  150.00/day | Frame: Mountain | Status: AVAILABLE
+  [Two-Wheeler]   Reg: TN-02-TW-202 | Rate: Rs.  450.00/day | CC:  150 | Fuel: 100.00% | Service Due: 15/12/2026 | Status: AVAILABLE
+  [Car]           Reg: TN-03-CR-303 | Rate: Rs. 2200.00/day | Seats:  7 | Fuel: 100.00% | Service Due: 20/11/2026 | Status: AVAILABLE
+  [Electric Car]  Reg: TN-04-EV-404 | Rate: Rs. 1800.00/day | Battery: 45 kWh | Charge: 100.00% | Service Due: 10/01/2027 | Status: AVAILABLE
+  [Electric Bus]  Reg: TN-05-EB-505 | Rate: Rs. 5500.00/day | Pass:  42 | Battery: 250 kWh | Service Due: 25/02/2027 | Status: AVAILABLE
+----------------------------------------------------------------------------------------------------
+
+Renting and Returning New ElectricBus (Demonstrating Polymorphic Extensibility):
+  [RENTED SUCCESS]: Electric Bus (42 Pass.) [TN-05-EB-505] rented for 5 days at Rs. 5500.00/day.
+    * Heavy Vehicle EV Recharge: 75.00 kWh @ Rs. 18.0/kWh -> Rs. 1350.00
+  [RETURN SUCCESS]: Electric Bus (42 Pass.) [TN-05-EB-505] returned after 5 days. Final Bill: Rs. 34850.00
+
+>>> 6. Alternative Concept & Complexity Analysis:
+  ----------------------------------------------------------------------------------------
+  Dimension             | Abstract Base Class + Virtual    | Single Class with Switch
+  ----------------------+----------------------------------+-------------------------------
+  Time Complexity       | O(1) constant vtable lookup      | O(1) jump table / switch
+  Space Overhead        | 8 bytes (vptr); 0 unused fields  | Up to 65% wasted memory (unused
+                        | (exact size per derived type)    | fields for all vehicle types)
+  Open/Closed Principle | Fully Compliant (OCP adhered):   | Violates OCP: Adding new type
+                        | New types added via inheritance  | requires editing core class,
+                        | with zero edits to working code  | enum, and all switch branches
+  Extensibility Cost    | Zero regression risk in existing | High regression risk across
+                        | tested classes or fleet managers | entire monolithic codebase
+  ----------------------------------------------------------------------------------------
+
+====================================================================================================
+ Task 6 Demonstration Complete.
+====================================================================================================
