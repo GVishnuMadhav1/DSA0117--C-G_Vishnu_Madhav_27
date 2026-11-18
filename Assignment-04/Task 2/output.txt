@@ -1,0 +1,42 @@
+====================================================================
+ SIMATS ENGINEERING - OOP C++ (DSA0117) - ASSIGNMENT 4 TASK 2
+ Student: G Vishnu Madhav | Reg No: 192425192 | Section: AI-ML
+ Task 2: University People Management & Diamond Inheritance
+====================================================================
+
+>>> 1. Predict-the-Output Verification:
+Output of Predict-the-Output Code: Person Student Staff TA 
+Explanation: With virtual inheritance, Person is constructed exactly once.
+
+>>> 2. Instantiating TeachingAssistant (Demonstrating Single Person Subobject):
+[Constructor] Person initialized: Vishnu Madhav (ID: 192425192)
+[Constructor] Student initialized: B.Tech AI-ML (CGPA: 9.42)
+[Constructor] Staff initialized: Computer Science (Salary: 28000)
+[Constructor] TeachingAssistant initialized: 12 teaching hours
+
+Displaying TA Details (Direct unambiguous member access):
+--- Teaching Assistant Profile ---
+ID: 192425192 | Name: Vishnu Madhav | Phone: 9876543210
+Programme: B.Tech AI-ML | CGPA: 9.42 | Dept: Computer Science | Salary: Rs. 28000 | Teaching Load: 12 hrs/week
+
+Destruction Trace upon block exit:
+[Destructor] ~TeachingAssistant destroyed
+[Destructor] ~Staff destroyed: Computer Science
+[Destructor] ~Student destroyed: B.Tech AI-ML
+[Destructor] ~Person destroyed: Vishnu Madhav
+
+>>> 3. Instantiating ResearchScholar (Inheritance + Fellowship Composition):
+[Constructor] Person initialized: Niharika Sharma (ID: 192472335)
+[Constructor] Student initialized: Ph.D AI & Robotics (CGPA: 9.85)
+[Constructor] ResearchScholar initialized in domain: Reinforcement Learning for Autonomous Drones
+
+Displaying Research Scholar Details:
+--- Research Scholar Profile ---
+ID: 192472335 | Name: Niharika Sharma | Phone: 9123456780 | Prog: Ph.D AI & Robotics | CGPA: 9.85
+Domain: Reinforcement Learning for Autonomous Drones | Grant: DST-2026-AI-042 (DST-SERB) @ Rs. 35000.00/month
+
+Destruction Trace upon block exit:
+[Destructor] ~ResearchScholar destroyed
+[Destructor] ~Student destroyed: Ph.D AI & Robotics
+[Destructor] ~Person destroyed: Niharika Sharma
+====================================================================
