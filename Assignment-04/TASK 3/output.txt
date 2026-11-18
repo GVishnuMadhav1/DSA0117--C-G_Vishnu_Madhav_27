@@ -1,0 +1,43 @@
+====================================================================
+ SIMATS ENGINEERING - OOP C++ (DSA0117) - ASSIGNMENT 4 TASK 3
+ Student: G Vishnu Madhav | Reg No: 192425192 | Section: AI-ML
+ Task 3: Order of Construction and Destruction with Member Classes
+====================================================================
+
+>>> 1. Predict-the-Output Code Execution:
+Predicted vs Actual Output: Vehicle Engine Car | ~Car ~Engine ~Vehicle 
+
+>>> 2. Complete-the-Code Execution (TODO 1 Initializer List):
+Complete-the-Code Execution Result: 192311001 Kavya (19) Salem-636001
+
+>>> 3. Tracing Construction & Destruction Order for StudentTraced:
+  [Construct] AddressMember: Salem-636001
+ [Construct] PersonTraced: Kavya
+  [Construct] CourseMember: DSA0117 - OOP with C++
+ [Construct] StudentTraced: Reg 192311001
+ [Destroy] ~StudentTraced: Reg 192311001
+  [Destroy] ~CourseMember: DSA0117
+ [Destroy] ~PersonTraced: Kavya
+  [Destroy] ~AddressMember: Salem
+
+>>> 4. Tracing Construction & Destruction Order for TeachingAssistant (TATraced):
+  [Construct] AddressMember: Chennai-600077
+ [Construct] PersonTraced: G Vishnu Madhav
+  [Construct] CourseMember: DSA0117 - OOP with C++
+ [Construct] StudentTraced: Reg 192425192
+ [Construct] StaffTraced: Dept Computer Science
+ [Construct] TATraced: 10 hrs
+ [Destroy] ~TATraced
+ [Destroy] ~StaffTraced: Dept Computer Science
+ [Destroy] ~StudentTraced: Reg 192425192
+  [Destroy] ~CourseMember: DSA0117
+ [Destroy] ~PersonTraced: G Vishnu Madhav
+  [Destroy] ~AddressMember: Chennai
+
+>>> 5. Task 3.4 Experiment: sizeof Comparison (Virtual vs Non-Virtual):
+Size of Non-Virtual TeachingAssistant (two Person subobjects): 20 bytes
+Size of Virtual TeachingAssistant (one Person subobject + vbptrs): 40 bytes
+
+Rule Confirmed: Virtual bases -> Direct bases -> Members -> Derived body.
+Destructors execute in exact reverse order.
+====================================================================
