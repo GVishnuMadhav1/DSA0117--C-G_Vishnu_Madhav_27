@@ -1,0 +1,25 @@
+===================================================================
+ TASK B2: ENGINEER ERROR CONDITIONS & AUDIT RETHROWING
+ Student: G. Vishnu Madhav (192425192) | Batch 27 | Course: DSA0117
+===================================================================
+
+--- 1. PREDICT THE OUTPUT VERIFICATION (PAGES 11-12) ---
+Actual Program Output: ok done caught negative [log too large] caught too large 
+Predicted Output     : ok done caught negative [log too large] caught too large 
+
+--- 2. COMPLETE THE CODE EXECUTION (PAGES 12-14) ---
+Actual Program Output:
+approved 40000
+audit: exceeds cover
+claim rejected: exceeds cover
+error: negative amount
+
+--- 3. ENGINEERED ERROR CONDITIONS COMPREHENSIVE SUITE ---
+Test 1: Parsing invalid numeric input 'two-thousand' via std::stod ...
+  -> [CAUGHT std::invalid_argument]: Bad numeric string format.
+Test 2: Forcing std::bad_alloc request (huge allocation) ...
+  -> [CAUGHT std::bad_alloc]: Memory allocation safely trapped.
+Test 3: Unhandled custom error trapped by top-level catch(...) ...
+  -> [CAUGHT TOP-LEVEL catch(...)]: Application uptime preserved!
+
+[PASS] Task B2 completed with 100% agreement on all specifications.
