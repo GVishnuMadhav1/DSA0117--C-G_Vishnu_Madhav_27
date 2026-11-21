@@ -1,0 +1,27 @@
+===================================================================
+ TASK A2: RUNTIME BINDING, VTABLE DISPATCH & VIRTUAL DESTRUCTORS
+ Student: G. Vishnu Madhav (192425192) | Batch 27 | Course: DSA0117
+===================================================================
+
+--- 1. PREDICT THE OUTPUT VERIFICATION (PAGE 4 SPECIFICATION) ---
+Executing: Bill* b = new OPBill; b->show(); delete b;
+Actual Program Output: 500 ~OPBill ~Bill 
+Predicted Output     : 500 ~OPBill ~Bill 
+[EXPLANATION] show() is non-virtual, but calls virtual total() on this->total().
+Since this points to OPBill, late binding resolves to OPBill::total() (500).
+delete b invokes virtual destructor: OPBill::~OPBill() runs first, then Bill::~Bill().
+
+--- 2. VIRTUAL DESTRUCTOR VS NON-VIRTUAL DESTRUCTOR HAZARD ---
+Case A: Polymorphic delete WITH virtual destructor:
+[DerivedSafe::~DerivedSafe - Heap Safely Freed] [BaseVirtual::~BaseVirtual] 
+[PASS] Derived destructor executed cleanly; zero memory leaked.
+
+Case B: Polymorphic delete WITHOUT virtual destructor:
+[BaseNonVirtual::~BaseNonVirtual] 
+[HAZARD] DerivedResource destructor was SKIPPED! Heap memory leaked!
+Under -fsanitize=address, this triggers undefined behavior.
+
+--- 3. MEMORY LAYOUT & VPTR INSPECTION ---
+sizeof(BaseNonVirtual): 32 bytes (only data members)
+sizeof(BaseVirtual)   : 40 bytes (data members + 8-byte vptr)
+Virtual table pointer (vptr) added overhead: 8 bytes on 64-bit architecture.
