@@ -1,0 +1,26 @@
+===================================================================
+ TASK B1: IMPLEMENT & VALIDATE POLYMORPHIC BILLING
+ Student: G. Vishnu Madhav (192425192) | Batch 27 | Course: DSA0117
+===================================================================
+
+--- 1. EXECUTING 'COMPLETE THE CODE' PROGRAM (PAGES 8-10) ---
+Expected Output:
+OP Ravi: 1700
+IP Meena: 47500
+Total 49200
+
+Actual Program Output:
+OP Ravi: 1700
+IP Meena: 47500
+Total 49200
+
+--- 2. EXTENDED HAND-VERIFICATION TEST SUITE ---
++---------------+------------+------------------------+-------------+------------+
+| Patient       | Department | Components             | Total (Rs.) | Hand Check |
++---------------+------------+------------------------+-------------+------------+
+| Ravi          | OP         | 500 + 1200             | 1,700.00    | VERIFIED   |
+| Meena         | IP         | 3 * 2500 + 40000       | 47,500.00   | VERIFIED   |
+| Total Revenue | Combined   | 1700 + 47500           | 49,200.00   | MATCH      |
++---------------+------------+------------------------+-------------+------------+
+
+[PASS] Task B1 completed and validated against official expected output.
