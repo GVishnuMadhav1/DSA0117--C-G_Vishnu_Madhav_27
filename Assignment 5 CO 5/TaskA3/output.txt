@@ -1,0 +1,18 @@
+===================================================================
+ TASK A3: DESIGN WITH ABSTRACT CLASSES (PAYER INTERFACE & EXTENSION)
+ Student: G. Vishnu Madhav (192425192) | Batch 27 | Course: DSA0117
+===================================================================
+
+--- Evaluating Settlement for Bill 1: OP Ravi Kumar (Rs. 2500.00) ---
+Payer: Self-Pay (100% Patient)                    | Covered: Rs. 0.00      | Patient Share: Rs. 2500.00
+Payer: Private Insurance (10% Co-pay, Max Rs. 50k) | Covered: Rs. 2250.00   | Patient Share: Rs. 250.00
+Payer: Government Health Scheme (Fixed Package Rates) | Covered: Rs. 1000.00   | Patient Share: Rs. 1500.00
+Payer: Corporate Tie-Up (Infosys Health Care)     | Covered: Rs. 2000.00   | Patient Share: Rs. 500.00
+
+--- Evaluating Settlement for Bill 2: IP Meena Sharma (Rs. 65000.00) ---
+Payer: Self-Pay (100% Patient)                    | Covered: Rs. 0.00      | Patient Share: Rs. 65000.00
+Payer: Private Insurance (10% Co-pay, Max Rs. 50k) | Covered: Rs. 50000.00  | Patient Share: Rs. 15000.00
+Payer: Government Health Scheme (Fixed Package Rates) | Covered: Rs. 40000.00  | Patient Share: Rs. 25000.00
+Payer: Corporate Tie-Up (Infosys Health Care)     | Covered: Rs. 64500.00  | Patient Share: Rs. 500.00
+
+[PASS] Open-Closed Principle verified: CorporateTieUp integrated with 0 code churn.
