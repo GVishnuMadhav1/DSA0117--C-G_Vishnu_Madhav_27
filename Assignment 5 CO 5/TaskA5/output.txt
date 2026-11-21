@@ -1,0 +1,21 @@
+===================================================================
+ TASK A5: DESIGN RECOVERY, RETHROWING & RAII RESOURCE SAFETY
+ Student: G. Vishnu Madhav (192425192) | Batch 27 | Course: DSA0117
+===================================================================
+
+--- 1. PREDICT THE OUTPUT VERIFICATION (PAGES 6-7) ---
+Executing Guard Stack Unwinding Program:
+Actual Program Output: ~f ~main caught 42
+Predicted Output     : ~f ~main caught 42
+[EXPLANATION] Stack unwinding destroys local objects in reverse order of construction:
+  1. Guard 'g' in f() is destroyed first -> ~f
+  2. Stack unwinds to main(); Guard 'm' in try block is destroyed -> ~main
+  3. 'not printed' is skipped; matching handler catches 42 -> caught 42
+
+--- 2. TIERED EXCEPTION HANDLING WITH throw; PROPAGATION ---
+Attempting settlement with Billed: Rs. 80000, Cover: Rs. 50000 ...
+[AUDIT LOG RECORDED]: Exceeds policy cover limit
+~ServiceGuard Top-Level Handler Caught Rethrown Exception: Exceeds policy cover limit
+Application state restored; no termination, zero resource leaks.
+
+[PASS] Stack unwinding and rethrow semantics verified successfully.
