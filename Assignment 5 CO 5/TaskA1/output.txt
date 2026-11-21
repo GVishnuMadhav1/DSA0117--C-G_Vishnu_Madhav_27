@@ -1,0 +1,15 @@
+===================================================================
+ TASK A1: POLYMORPHIC HOSPITAL BILL HIERARCHY EVALUATION
+ Student: G. Vishnu Madhav (192425192) | Batch 27 | Course: DSA0117
+===================================================================
+
+--- Processing All Bills Through Base-Class Pointers (Late Binding) ---
+[Out-Patient    ] Bill ID: #1001 | Patient: Ravi Kumar     | Total: Rs. 2200.00
+[In-Patient     ] Bill ID: #1002 | Patient: Meena Sharma   | Total: Rs. 72500.00
+[Day-Care       ] Bill ID: #1003 | Patient: Anand Rao      | Total: Rs. 24000.00
+[Emergency      ] Bill ID: #1004 | Patient: Suresh Pillai  | Total: Rs. 14600.00
+-------------------------------------------------------------------
+Hospital Revenue Summary:
+Total Active Bills Processed: 4
+Day's Aggregate Hospital Billing Total: Rs. 113300.00
+[PASS] Dynamic dispatch verified across all derived bill types.
