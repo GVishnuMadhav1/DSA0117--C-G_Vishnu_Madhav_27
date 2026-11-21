@@ -1,0 +1,29 @@
+===================================================================
+ TASK B3: PERFORMANCE BENCHMARKING (VIRTUAL vs SWITCH vs EXCEPTIONS)
+ Student: G. Vishnu Madhav (192425192) | Batch 27 | Course: DSA0117
+===================================================================
+
+--- B3.1: Small-Scale Correctness (10 Identical Bills) ---
+Virtual Functions Total (10 bills): Rs. 197300.00
+Switch Statement Total  (10 bills): Rs. 197300.00
+Agreement Check: [MATCH 100%]
+
+--- B3.2: High-Throughput Scaling Benchmarks (-O2 Optimized) ---
++---------------+---------------------+--------------------+--------------------+
+| Bill Count    | Virtual Disp (ms)   | Switch Stmt (ms)   | Discrepancy        |
++---------------+---------------------+--------------------+--------------------+
+| 1000         | 0.00               | 0.00              | 0.00% (Identical)  |
+| 1000000      | 2.01               | 0.00              | 0.00% (Identical)  |
+| 10000000     | 14.23              | 0.00              | 0.00% (Identical)  |
++---------------+---------------------+--------------------+--------------------+
+
+--- B3.3: Cost of Exceptions vs Return Codes (1,000,000 Validations) ---
++-------------+-----------------------+--------------------+--------------------+
+| Error Rate  | Return Codes (ms)     | Exceptions (ms)    | Engineering Note   |
++-------------+-----------------------+--------------------+--------------------+
+| 0%         | 0.00                 | 1.00              | Zero-cost happy path|
+| 1%         | 0.00                 | 17.44             | Unwinding cost visible|
+| 50%        | 0.00                 | 866.53            | Unwinding cost visible|
++-------------+-----------------------+--------------------+--------------------+
+[CONCLUSION] On 0% error path, Exceptions exhibit zero-overhead (no branch checks).
+When errors are frequent (50%), DWARF table unwinding adds latency, favoring return codes.
