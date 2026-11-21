@@ -1,0 +1,18 @@
+===================================================================
+ TASK A4: DESIGN THE EXCEPTION STRATEGY & HIERARCHY EVALUATION
+ Student: G. Vishnu Madhav (192425192) | Batch 27 | Course: DSA0117
+===================================================================
+
+Running Test: Valid Outpatient Case ...
+  -> SUCCESS: Claim approved for Rs. 1500
+Running Test: Negative Charge Test ...
+  -> CAUGHT InvalidChargeException [Code 101]: [BillingError] Negative/Invalid charge: Amount must be positive.
+Running Test: Exceeds Cover Test ...
+  -> CAUGHT ExceedsCoverException [Code 201]: [ClaimError] Billed amount Rs. 25000.000000 exceeds policy limit Rs. 5000.000000
+Running Test: Unknown Package Test ...
+  -> CAUGHT UnknownPackageException [Code 102]: [BillingError] Package code not recognized: INVALID_CODE
+
+--- noexcept Verification ---
+safeCalculateNet is noexcept: true
+validateAndApprove is noexcept: false
+[PASS] Exception taxonomy and specifications fully validated.
